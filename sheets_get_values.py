@@ -57,7 +57,12 @@ def get_values():
         except IndexError:
             print('[-] Не все поля таблицы заполнены. Ожидание 5 сек')
             time.sleep(5)
-            get_values()
+            result = get_values()
+        
+        except ValueError:
+            print('[-] В изменяемой строке пустая ячейка. Ожидание 5 сек')
+            time.sleep(5)
+            result = get_values()
 
     except HttpError as err:
         print(err)
