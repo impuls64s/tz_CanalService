@@ -12,7 +12,7 @@ Cсылка на копию таблицы --> https://docs.google.com/spreadshe
 
 ### Установка и запуск:
 
-Необходимо в корне проекта создать файл <b>.env</b> и записать туда значения <b>POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD</b> для PostgreSql. Пример POSTGRES_DB=my_database, POSTGRES_USER=root, POSTGRES_PASSWORD=hobbit
+Необходимо в корне проекта создать файл <b>.env</b> и записать туда свои значения <b>POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD</b> для PostgreSql. Пример POSTGRES_DB=my_database, POSTGRES_USER=root, POSTGRES_PASSWORD=hobbit
 
 <pre>
 $ git clone https://github.com/impuls64s/tz_CanalService.git
