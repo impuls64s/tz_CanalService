@@ -29,7 +29,7 @@ services:
 
   my_script:
     image: tz_canalservice_web
-    command: python script.py
+    command: python scripts/script.py
     environment:
       - POSTGRES_DB=canal_service
       - POSTGRES_USER=impuls_64
