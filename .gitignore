@@ -3,3 +3,4 @@ __pycache__
 Dockerfile
 docker-compose.yml
 1
+ex1.py

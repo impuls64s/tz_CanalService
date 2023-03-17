@@ -12,11 +12,10 @@ def update_db(table_google):
 
     try:
         conn = psycopg2.connect(
-            database = os.getenv('DB_NAME'),
-            user = os.getenv('DB_USER'),
-            password = os.getenv('DB_PASSWORD'),
-            host = os.getenv('DB_HOST'),
-            port = os.getenv('DB_PORT')
+            database = os.environ.get('POSTGRES_DB'),
+            user = os.environ.get('POSTGRES_USER'),
+            password = os.environ.get('POSTGRES_PASSWORD'),
+            host = os.environ.get("P_HOST", "localhost")
         )
         cur = conn.cursor()
         cur.execute(
@@ -113,7 +112,7 @@ def update_db(table_google):
 
 def main(timeout=1):
 
-    with open('last_data.txt', 'r') as file:
+    with open('scripts/last_data.txt', 'r') as file:
         last_data = file.read()
 
     while True:
@@ -134,7 +133,7 @@ def main(timeout=1):
             break
         
         finally:
-            with open('last_data.txt', 'w') as file:
+            with open('scripts/last_data.txt', 'w') as file:
                 file.write(last_data)
 
 

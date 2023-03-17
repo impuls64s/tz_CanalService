@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 def usd_exchange_rate(price_usd):
     today = datetime.now().strftime("%d/%m/%Y")
 
-    tree = ET.parse('cbr.xml')
+    tree = ET.parse('scripts/cbr.xml')
     root = tree.getroot()
     date_xml = root.attrib.get('Date').replace('.', '/')
 
@@ -17,7 +17,7 @@ def usd_exchange_rate(price_usd):
         resp = requests.get(
             f'https://www.cbr.ru/scripts/XML_daily_eng.asp?date_req={today}'
         )
-        with open('cbr.xml', 'w') as file:
+        with open('scripts/cbr.xml', 'w') as file:
             file.write(resp.text)
         usd_exchange_rate(price_usd)
 
