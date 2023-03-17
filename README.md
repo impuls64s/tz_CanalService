@@ -23,7 +23,7 @@ $ pip install -r requirements.txt
 $ python3 manage.py migrate
 
 <i>Запускаем скрипт, для остановки Ctrl + C</i>
-$ python3 script.py
+$ python3 scripts/script.py
 
 <i>Открываем еще один терминал и запускаем веб-приложение. Открываем http://127.0.0.1:8000/ и видим таблицу из БД</i>
 $ python3 manage.py runserver
