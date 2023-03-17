@@ -12,7 +12,7 @@ Cсылка на копию таблицы --> https://docs.google.com/spreadshe
 
 ### Установка и запуск:
 
-Необходимо в корне проекта создать файл <b>.env</b> и записать туда значения POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD для PostgreSql.
+Необходимо в корне проекта создать файл <b>.env</b> и записать туда значения <b>POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD</b> для PostgreSql. Пример POSTGRES_DB=my_database, POSTGRES_USER=root, POSTGRES_PASSWORD=hobbit
 
 <pre>
 $ git clone https://github.com/impuls64s/tz_CanalService.git
@@ -21,14 +21,14 @@ $ python3 -m venv .venv
 $ source .venv/bin/activate
 $ pip install -r requirements.txt
 $ python3 manage.py migrate
-$
-# Запускаем скрипт, для остановки Ctrl + C
+
+<i>Запускаем скрипт, для остановки Ctrl + C</i>
 $ python3 script.py
-$
-# Открываем еще один терминал и запускаем веб-приложение. Открываем http://127.0.0.1:8000/ и видим таблицу из БД
+
+<i>Открываем еще один терминал и запускаем веб-приложение. Открываем http://127.0.0.1:8000/ и видим таблицу из БД</i>
 $ python3 manage.py runserver
 
-# Примерно такие принты будут в терминале:
+<i>Примерно такие принты будут в терминале:</i>
 [INFO] Данные в Google таблице не изменились.
 [INFO] Данные в Google таблице не изменились.
 [+] Google таблица изменилась, обновляю БД
