@@ -1,6 +1,5 @@
 .venv
 __pycache__
-Dockerfile
-docker-compose.yml
 1
 ex1.py
+.env
