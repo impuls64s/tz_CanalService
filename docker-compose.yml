@@ -13,7 +13,8 @@ services:
   web:
     build: ./
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python conn_db.py &&
+             python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
@@ -36,4 +37,5 @@ services:
       - POSTGRES_PASSWORD=239awp239
       - P_HOST=db
     depends_on:
+      - web
       - db

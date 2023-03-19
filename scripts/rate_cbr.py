@@ -8,7 +8,6 @@ import xml.etree.ElementTree as ET
 # В качестве аргумента принимает суммув USD, возвращает сумму в рублях
 def usd_exchange_rate(price_usd):
     today = datetime.now().strftime("%d/%m/%Y")
-
     tree = ET.parse('scripts/cbr.xml')
     root = tree.getroot()
     date_xml = root.attrib.get('Date').replace('.', '/')
@@ -19,7 +18,8 @@ def usd_exchange_rate(price_usd):
         )
         with open('scripts/cbr.xml', 'w') as file:
             file.write(resp.text)
-        usd_exchange_rate(price_usd)
+        tree = ET.parse('scripts/cbr.xml')
+        root = tree.getroot()
 
     for country in root.findall('Valute'):
         char_code = country.find('CharCode').text

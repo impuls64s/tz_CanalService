@@ -5,8 +5,8 @@ import time
 from dotenv import load_dotenv
 import os
 
-
 load_dotenv()
+
 
 def update_db(table_google):
 
@@ -101,14 +101,26 @@ def update_db(table_google):
                 )
                 conn.commit()
 
+    except psycopg2.OperationalError:
+        print(f'[-] БД еще не готова! Повторное подключение через 3 сек.')
+        time.sleep(3)
+        update_db(table_google)
+    
+    except psycopg2.errors.UndefinedTable:
+        print(f'[-] Миграции еще не созданы! Повторное подключение через 3 сек.')
+        time.sleep(3)
+        update_db(table_google)
 
     except Exception as ex:
-        print(ex)
- 
+        raise ex
+
+    else:
+        conn.close()
+
     finally:
         cur.close()
         conn.close()
-    
+
 
 def main(timeout=1):
 
