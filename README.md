@@ -1,4 +1,4 @@
-### Выполненное тестовое задание компании "Каналсервис"
+## Выполненное тестовое задание компании "Каналсервис"
 
 Скрипт находится в папке "scripts" его функционал разделен на несколько модулей:
 
@@ -10,8 +10,17 @@
 
 Cсылка на копию таблицы --> https://docs.google.com/spreadsheets/d/1YQ8aSsxAe36w25PmsAgAkk21Ij6hXafh3OAYQ8xpCzw/edit#gid=0
 
-### Установка и запуск:
+## Установка и запуск:
 
+Установка с помощью <code>docker-compose.yml</code>:
+<pre>
+$ git clone https://github.com/impuls64s/tz_CanalService.git
+$ cd tz_CanalServic
+$ docker-compose up
+</pre>
+
+Полная установка:  
+Требуется Python 3.7 и выше и База данных PostgreSql.  
 Необходимо в корне проекта создать файл <b>.env</b> и записать туда свои значения переменных для PostgreSQL. 
 
 <pre>
