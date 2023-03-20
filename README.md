@@ -12,14 +12,14 @@ Cсылка на копию таблицы --> https://docs.google.com/spreadshe
 
 ## Установка и запуск:
 
-Установка с помощью <code>docker-compose.yml</code>:
+<b>Установка с помощью </b><code>docker-compose.yml</code>:
 <pre>
 $ git clone https://github.com/impuls64s/tz_CanalService.git
 $ cd tz_CanalService
 $ docker-compose up
 </pre>
 
-Полная установка:  
+<b>Полная установка:</b>  
 Требуется Python 3.7 и выше и База данных PostgreSql.  
 Необходимо в корне проекта создать файл <b>.env</b> и записать туда свои значения переменных для PostgreSQL. 
 
