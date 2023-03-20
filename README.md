@@ -15,7 +15,7 @@ Cсылка на копию таблицы --> https://docs.google.com/spreadshe
 Установка с помощью <code>docker-compose.yml</code>:
 <pre>
 $ git clone https://github.com/impuls64s/tz_CanalService.git
-$ cd tz_CanalServic
+$ cd tz_CanalService
 $ docker-compose up
 </pre>
 
